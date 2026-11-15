@@ -1,4 +1,21 @@
-# Retail Business Intelligence & Predictive Analytics Model
+# RETAIL BUSINESS INTELLIGENCE & PREDICTIVE ANALYTICS MODEL
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/NumPy-Scientific%20Computing-013243?logo=numpy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/Matplotlib-Visualization-11557C" />
+  <img src="https://img.shields.io/badge/Seaborn-Statistical%20Visualization-4C72B0" />
+  <img src="https://img.shields.io/badge/Status-Completed-success" />
+</p>
+
+<p align="center">
+  <b>End-to-end retail analytics project combining exploratory data analysis, business intelligence, demand prediction, pricing analysis, and profitability evaluation.</b>
+</p>
+
+---
 
 ## Project Overview
 
@@ -31,7 +48,7 @@ This project investigates the following questions:
 
 ## Dataset
 
-The dataset contains 76,000 records and 16 columns.
+The dataset contains **76,000 records and 16 columns**.
 
 Important variables include:
 
@@ -58,19 +75,21 @@ The dataset covers five product categories, four regions, five stores and twenty
 
 ## Technology Stack
 
-- **Python** — Core programming language
-- **Pandas** — Data manipulation and analysis
-- **NumPy** — Numerical computation
-- **Matplotlib** — Data visualisation
-- **Seaborn** — Statistical visualisation
-- **Scikit-learn** — Machine learning and model evaluation
-- **SciPy** — Scientific computing
-- **Jupyter Notebook** — Interactive analysis
-- **VS Code** — Development environment
+| Technology | Application |
+|---|---|
+| Python | Core programming language |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical computation |
+| Matplotlib | Data visualisation |
+| Seaborn | Statistical visualisation |
+| Scikit-learn | Machine learning and model evaluation |
+| SciPy | Scientific computing |
+| Jupyter Notebook | Interactive analysis |
+| VS Code | Development environment |
 
 ## Machine Learning Results
 
-Two predictive approaches and a baseline model were evaluated.
+Three predictive approaches were evaluated: Linear Regression, Random Forest and a Dummy Baseline.
 
 | Model | MAE | RMSE | R² |
 |---|---:|---:|---:|
@@ -79,12 +98,14 @@ Two predictive approaches and a baseline model were evaluated.
 | Random Forest — Chronological Split | 16.00 | 22.34 | 0.7432 |
 | Dummy Baseline | 35.43 | 44.37 | -0.0131 |
 
+### Final Model Validation
+
 The final Random Forest model was evaluated using a chronological holdout:
 
-- Training period: January 2022 – August 2023
-- Testing period: September 2023 – January 2024
-- Training records: 60,800
-- Testing records: 15,200
+- **Training period:** January 2022 – August 2023
+- **Testing period:** September 2023 – January 2024
+- **Training records:** 60,800
+- **Testing records:** 15,200
 
 The chronological Random Forest model achieved an R² of approximately **0.743** on the test dataset.
 
@@ -93,11 +114,13 @@ This indicates useful predictive performance on the historical holdout, but does
 ## Key Business Findings
 
 ### Demand Analysis
+
 - Groceries recorded the highest average demand among the categories.
 - Clothing also showed strong average demand.
 - Furniture recorded the lowest average demand.
 
 ### Profitability Analysis
+
 Using illustrative category-level cost assumptions:
 
 - Furniture contributed approximately 35.72% of estimated total profit.
@@ -105,10 +128,12 @@ Using illustrative category-level cost assumptions:
 - Groceries generated the highest unit sales but had a comparatively lower estimated profit margin.
 
 ### Store Performance
+
 - Store S002 recorded the highest average demand and unit sales.
 - Store S004 generated the highest estimated profit and estimated profit margin despite having the lowest average demand.
 
 ### Inventory Insights
+
 - Furniture had the highest category-level inventory-to-sales ratio.
 - Inventory indicators varied across stores and product categories.
 
@@ -116,7 +141,7 @@ These findings identify areas for further investigation; they do not independent
 
 ## Illustrative Financial Analysis
 
-The pricing and profitability analysis uses:
+The pricing and profitability analysis uses the following calculations:
 
 - Estimated selling price = `Price × (1 − Discount / 100)`
 - Estimated sales value = `Estimated Selling Price × Units Sold`
@@ -139,7 +164,7 @@ The analysis is therefore an exploratory profitability model, not a validated pr
 ## Repository Structure
 
 ```text
-Retail-Pricing-Demand-Profitability-Model/
+Retail-Business-Intelligence-and-Predictive-Analytics-Model/
 │
 ├── Data/
 │   ├── Raw/
@@ -148,6 +173,7 @@ Retail-Pricing-Demand-Profitability-Model/
 │       └── retail_data_analyzed.csv
 │
 ├── Docs/
+│
 ├── Notebooks/
 │   ├── 01_Retail_Data_Exploration.ipynb
 │   ├── 02_Retail_Business_Analysis.ipynb
@@ -156,38 +182,51 @@ Retail-Pricing-Demand-Profitability-Model/
 │   └── 05_Business_Recommendations.ipynb
 │
 ├── Python/
+│
 ├── Reports/
 │   ├── final_demand_model_comparison.csv
 │   └── final_demand_predictions.csv
 │
 ├── Visualizations/
+│
 ├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
-Additional generated files may be added to the folders as the project is prepared for publication.
-
 ## Installation and Setup
 
-Clone the repository:
+### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd Retail-Pricing-Demand-Profitability-Model
+git clone https://github.com/yashkeram/Retail-Business-Intelligence-and-Predictive-Analytics-Model.git
 ```
 
-Create and activate a virtual environment on Windows:
+### 2. Navigate to the Project Directory
+
+```bash
+cd Retail-Business-Intelligence-and-Predictive-Analytics-Model
+```
+
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
+```
+
+### 4. Activate the Environment (Windows)
+
+```bash
 .venv\Scripts\activate
 ```
 
-Install the required packages:
+### 5. Install Dependencies
 
 ```bash
 pip install pandas numpy matplotlib seaborn scipy scikit-learn openpyxl ipykernel
 ```
+
+### 6. Run the Notebooks
 
 Open the project in VS Code, select the project virtual environment as the Python interpreter and notebook kernel, and execute the notebooks in numerical order.
 
@@ -208,8 +247,25 @@ Potential improvements include:
 
 This project demonstrates a complete analytical workflow that connects data exploration, business analysis, predictive modelling and management recommendations.
 
-It highlights an important business insight: **high demand and high sales volume do not necessarily translate into the highest profitability.**
+It highlights an important business insight:
+
+> **High demand and high sales volume do not necessarily translate into the highest profitability.**
 
 By combining demand estimates with pricing, inventory and cost information, retailers can develop a more comprehensive understanding of business performance.
 
 The project is an exploratory retail decision-support prototype and a practical application of Python, data analytics, machine learning and quantitative business modelling.
+
+---
+
+## Author
+
+**Yash Keram**
+
+- GitHub: [@yashkeram](https://github.com/yashkeram)
+- Project Repository: [Retail Business Intelligence & Predictive Analytics Model](https://github.com/yashkeram/Retail-Business-Intelligence-and-Predictive-Analytics-Model)
+
+---
+
+<p align="center">
+  <i>Turning retail data into analytical insights and better business decisions.</i>
+</p>
